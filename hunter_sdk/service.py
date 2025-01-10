@@ -11,9 +11,9 @@ from .exceptions import ValidationError, StorageError
 class HunterService:
     """Service for handling Hunter.io operations with storage."""
 
-    # RFC 5322 compliant email regex
+    # Updated regex to allow shorter domain parts
     EMAIL_PATTERN: Pattern = re.compile(
-        r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
+        r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{1,}$',
     )
 
     def __init__(
